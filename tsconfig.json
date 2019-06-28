@@ -1,0 +1,24 @@
+{
+  "pageNum": 20,
+  "pageCount": 0,
+  "orders":[{
+    //订单的时间
+    "orderTime":"1561713312",
+    //奖励金改变的数量
+    "bounty":20,
+    //奖励金改变后的数量
+    "balance":350,
+    //订单的来源
+    "orderOrigin":"来自且听风吟的订单",
+    //单号
+    "oddNum":4555555555,
+    //购买商品图片
+    "orderImg":"image/headImage2.jpg",
+    //用户向卖家付款金额
+    "PaymentAmount": 100,
+    //我的佣金
+    "myCommission":8,
+    //下属佣金
+    "branchCommission":15
+  }]
+}

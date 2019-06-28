@@ -1,0 +1,184 @@
+#main {
+    background: rgba(255, 255, 255, 0.5);
+}
+.myprice-title {
+    height: 50px;
+}
+.myprice-timeline {
+    position: relative;
+    margin: 10px 0px 0px 0px;
+    width:85%;
+}
+.myprice-timeline-wrap{
+    position: relative;
+}
+.myprice-timeline-wrap>.time-axis{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    padding-right: 9px;
+}
+.timeline-line {
+    position: absolute;
+    width: 0px;
+    border-left: 1px dashed #dedede;
+    height: 100%;
+    left: 105px;
+    top: 0px;
+}
+
+.timeline-row {
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+.timeline-year {
+    width: 90px;
+    text-align: right;
+    height: 40px;
+    line-height: 40px;
+}
+
+.timeline-year em {
+    color: #e72434;
+    font-size: 20px;
+}
+
+.timeline-year span {
+    color: #666666;
+    font-size: 16px;
+    margin-left: 2px;
+}
+
+.timeline-msg {
+    position: relative;
+    min-height: 40px;
+    padding-left: 121px;
+}
+
+.timeline-datetime {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 90px;
+    text-align: right;
+}
+
+.timeline-date {
+    height: 20px;
+    line-height: 20px;
+    font-size: 16px;
+    color: #333333;
+}
+
+.timeline-date em {
+    margin: 0px 2px;
+}
+
+.timeline-time {
+    height: 16px;
+    line-height: 16px;
+    color: #999999;
+}
+
+.timeline-time em {
+    margin: 0px 1px;
+}
+
+.timeline-char {
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    border: 2px solid #e72434;
+    background-color: #ffffff;
+    border-radius: 50%;
+    left: 99px;
+    top: 5px;
+}
+
+.timeline-info {
+    line-height: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #dedede;
+}
+
+.timeline-info b {
+    font-size: 13px;
+    margin: 0px 2px;
+    font-weight: normal;
+}
+
+.timeline-info b.plus {
+    color: #ff692f;
+}
+
+.timeline-info b.minus {
+    color: #008445;
+}
+
+.timeline-info b.now {
+    color: #e72434;
+    font-weight: bold;
+}
+
+
+.timeline-info em {
+    color: #79010b;
+    margin: 0 2px;
+}
+
+.timeline-info i {
+    color: #e72434;
+    margin-left: 2px;
+}
+
+.timeline-info div {
+    white-space: nowrap;
+}
+
+.timeline-info .remark {
+    color: #999999;
+    line-height: 16px;
+    height: 16px;
+}
+
+.timeline-info .item {
+    margin-top: 10px;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-info .item .image {
+    float: left;
+    margin-right: 6px;
+    width: 60px;
+    height: 60px;
+}
+
+.timeline-info .item .image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+}
+
+.timeline-info .item .info {
+    padding: 3px 0px;
+    line-height: 18px;
+    border-radius: 3px;
+}
+
+.timeline-info .item .info .sale-price i {
+    color: #79010b;
+}
+
+.timeline-info .item .info .get-price i {
+    color: #ff692f;
+}
+
+.timeline-info .item .info .my-price i {
+    color: #e72434;
+    font-weight: bold;
+}
