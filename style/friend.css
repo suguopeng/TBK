@@ -1,0 +1,299 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /*background:#fff;*/
+}
+
+
+.search {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    background: #eee;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.search-inp {
+    display: flex;
+    align-items: center;
+    width: 70%;
+    height: 30px;
+    background: #fff;
+    border-radius: 5px;
+}
+
+.search-inp img {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+}
+
+.search .copy-voucher, .search input {
+    border-radius: 5px;
+    font-size: 13px;
+    line-height: 30px;
+    margin-left: 6px;
+    flex-grow: 1;
+}
+
+.search input {
+    display: none;
+    padding-right: 2px;
+    border: none;
+    outline: none;
+}
+
+.search .copy-voucher > span:nth-child(2) {
+    color: red;
+}
+
+.search > .search-btn {
+    margin-left: 10px;
+    width: 25%;
+    height: 30px;
+    line-height: 30px;
+    background: red;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+}
+
+.bg {
+    width: 100%;
+}
+
+
+.user {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 10px;
+    align-items: center;
+    margin-top: -35px;
+}
+
+.user > .user-name {
+    margin-right: 20px;
+    margin-top: -15px;
+    font-size: 13px;
+    font-weight: bolder;
+    -webkit-text-stroke: 1px #C8C8C8;
+    color: transparent;
+}
+
+.user > .user-img {
+    width: 70px;
+    border-radius: 5px;
+}
+
+.describe {
+    margin-top: 20px;
+    float: right;
+    color: #818181;
+    font-size: 13px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.clearfix:after {
+    content: '';
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    room: 1
+}
+
+.content {
+    margin-bottom: 60px;
+}
+
+#list li {
+    display: flex;
+    line-height: 1.5;
+    border-bottom: thin solid #e2e2e2;
+    margin-top: 15px;
+    padding-bottom: 10px;
+}
+
+.po-avt-wrap {
+    margin-left: 10px
+}
+
+.po-avt {
+    width: 40px;
+    border-radius: 5px;
+}
+
+.po-cmt {
+    margin-left: 10px;
+    margin-right: 20px;
+    flex-grow: 1;
+    box-sizing: border-box;
+    word-break: break-all;
+}
+
+.po-name {
+    font-size: 15px;
+    font-weight: bold;
+    color: #0a2969;
+    font-family: Microsoft YaHei;
+}
+
+.post {
+    color: #252525;
+    padding-bottom: 10px;
+    font-size: 15px;
+    /*overflow:hidden;*/
+}
+
+.free_post {
+    padding:5px;
+    background-color: #f9f9f9;
+}
+
+.free_link {
+    display: flex;
+    align-items: center;
+
+}
+
+.free_title {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: 11px;
+    margin-left: 10px;
+    color: black;
+}
+
+.my-gallery {
+    overflow: hidden;
+    margin-top: -10px;
+}
+
+.my-gallery > .img-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    float: left;
+    margin: 5px 5px 0 0;
+    /*background:#eee;*/
+}
+
+.multiple {
+    width: 90px;
+    height: 90px;
+    overflow: hidden;
+}
+
+.single {
+    width: 50%;
+}
+
+.my-gallery .image-item {
+    /*object-fit:fill;*/
+}
+
+.picCountMultiple {
+    /*min-width:90px;*/
+    /*min-height:90px;*/
+}
+
+.picCountSingle {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.my-gallery figcaption {
+    display: none;
+    white-space: pre-line;
+}
+
+.comment {
+    margin-top: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+}
+
+.time {
+    color: #b1b1b1;
+}
+
+.get_price {
+    text-decoration: underline;
+    color: red;
+    font-size: 12px;
+}
+
+.loading {
+    position: fixed;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    font-size: 15px;
+}
+
+.camera1 {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 100;
+}
+
+.camera2 {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 99;
+    display: none;
+}
+
+.camera1 > img {
+    width: 20px;
+}
+
+.camera2 > img {
+    width: 18px;
+}
+
+.discuss-wrap {
+    width: 100%;
+    height: auto;
+}
+
+.discuss {
+    margin-top: 6px;
+    box-sizing: border-box;
+    padding: 5px;
+    background: #f9f9f9;
+}
+.discuss-wrap::before {
+    margin-left:8px;
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent transparent #f9f9f9 transparent;
+}

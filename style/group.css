@@ -1,0 +1,117 @@
+*{
+    margin:0;
+    padding:0;
+}
+body:before{
+    background: rgba(241, 241, 241, 0.64);
+}
+.wechat-group{
+    width:100%;
+    margin-top:30px;
+}
+.wechat-group-content{
+    width:100%;
+    display:flex;
+    line-height: 1.5;
+    /*border-bottom: 1px solid #e2e2e2;*/
+    margin-top: 15px;
+    padding-bottom: 10px;
+}
+.po-avt-wrap {
+    margin-left: 10px;
+}
+.po-avt {
+    width:40px;
+    border-radius:5px;
+}
+.po-cmt {
+    margin-left:15px;
+    margin-right: 20px;
+    flex-grow:1;
+    box-sizing: border-box;
+    word-break: break-all;
+}
+.post-out{
+    position:relative;
+}
+.po-image{
+   flex-grow:1;
+}
+.free_item{
+    display:flex;
+}
+
+.post-out::before{
+    position:absolute;
+    content:"";
+    top:10px;
+    left:-16px;
+    width:0px;
+    height:0px;
+    border-width:8px;
+    border-style:solid;
+    border-color:transparent white transparent transparent;
+}
+.po-name {
+    font-size: 12px;
+    color: #797373;
+    margin-bottom:10px;
+}
+.post {
+    padding:15px;
+    background:#fff;
+    border-radius:10px;
+    color: #252525;
+    padding-bottom: 10px;
+    font-size: 15px;
+    /*overflow:hidden;*/
+}
+.free_post{
+    background:#eeee;
+    font-size:10px;
+    border-radius:0px;
+}
+.free_link{
+    display:flex;
+    align-items: center;
+}
+.free_title{
+    margin-left:10px;
+    color:black;
+}
+figure{
+    border-radius:5%;
+    /*width:60%;*/
+    width:170px;
+    height:170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+    margin: 5px 5px 0 0;
+    background:url(../image/loading.gif);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.figure-image{
+    border-radius:5%;
+    max-width:180px;
+    max-height:180px;
+}
+.my-gallery figcaption {
+    display: none;
+    white-space: pre-line;
+}
+.get_price{
+    color:red;
+    font-size:10px;
+}
+.comment{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.time {
+    color: #b1b1b1;
+}

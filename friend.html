@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>超级朋友圈</title>
+    <script type="text/javascript" src="https://hm.baidu.com/hm.js?f408f1e4e6388daa80fc487c5e68ebab"></script>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+    <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/jquery-3.4.0.js"></script>
+    <script type="text/javascript" src="js/jquery.resize.min.js"></script>
+    <script type="text/javascript" src="js/clipboard.min.js"></script>
+    <script type="text/javascript" src="js/default.js"></script>
+    <script type="text/javascript" src="js/friend.js"></script>
+    <script type="text/javascript" src="js/photoswipe-ui-default.min.js"></script>
+    <script type="text/javascript" src="js/photoswipe.js"></script>
+    <script type="text/javascript" src="js/photoswiper_my.js"></script>
+    <script type="text/javascript" src="js/swiperSlider.js"></script>
+    <script type="text/javascript" src="http://layui.hcwl520.com.cn/layer-v3.1.1/layer.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style/default.css"/>
+    <link rel="stylesheet" type="text/css" href="style/friend.css"/>
+    <link rel="stylesheet" type="text/css" href="style/photoswipe.css">
+    <link rel="stylesheet" type="text/css" href="style/default-skin.css">
+
+
+</head>
+
+<body>
+<div id="main">
+    <input id="friendOrGroup" value="1" type="hidden">
+    <input id="cpageNum" type="hidden" value="1">
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+        <!-- Background of PhotoSwipe.
+             It's a separate element as animating opacity is faster than rgba(). -->
+        <div class="pswp__bg"></div>
+
+        <!-- Slides wrapper with overflow:hidden. -->
+        <div class="pswp__scroll-wrap">
+
+            <!-- Container that holds slides.
+                PhotoSwipe keeps only 3 of them in the DOM to save memory.
+                Don't modify these 3 pswp__item elements, data is added later on. -->
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+
+            <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+            <div class="pswp__ui pswp__ui--hidden">
+
+                <div class="pswp__top-bar">
+
+                    <!--  Controls are self-explanatory. Order can be changed. -->
+
+                    <div class="pswp__counter"></div>
+
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                    <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                    <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                    <!-- element will get class pswp__preloader--active when preloader is running -->
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div>
+
+                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+                </button>
+
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+                </button>
+
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="header clearfix">
+        <div id="item-images-slide" class="swipslider" style="z-index: -1">
+            <div class="sw-slides">
+                <!--                <div class="sw-slide">-->
+                <!--                    <img src="image/headImage.jpg" style="width:100%;position:absolute;top:0;object-fit:cover;" />-->
+                <!--                </div>-->
+                <div class="sw-slide">
+                    <img src="image/headImage1.jpg" style="width:100%;position:absolute;top:0;object-fit:cover;"/>
+                </div>
+                <div class="sw-slide">
+                    <img src="image/headImage2.jpg" style="width:100%;position:absolute;top:0;object-fit:cover;"/>
+                </div>
+            </div>
+        </div>
+
+        <div class="user">
+            <span class="user-name"></span>
+            <img class="user-img" src="" alt="">
+        </div>
+
+</div>
+    <div id="list">
+        <ul id="div_each"></ul>
+    </div>
+</div>
+<div class="loading">
+    <span>努力加载中...</span>
+</div>
+<!--<div class="camera1">-->
+    <!--<img src="image/iconImg/icon-camera1.png" alt="">-->
+<!--</div>-->
+<!--<div class="camera2">-->
+    <!--<img src="image/iconImg/icon-camera2.png" alt="">-->
+<!--</div>-->
+</body>
+</html>
