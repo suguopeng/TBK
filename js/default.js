@@ -789,12 +789,11 @@ var Model_Item = function () {
         couponPrice:0.00,
         //佣金
         getPrice:0.00,
+
         //用户评论的内容
         commentContent:"",
         //每个商品评论的条数
         commentNum:"",
-
-
 
         pic: '',
         //商品链接
@@ -834,7 +833,43 @@ var imageModel=function(){
     }
 
 }
+//订单列表模型
+var Model_OrdersList = function () {
+    return {
+        totalCount: 0,
+        pageNum: 0,
+        pageCount: 0,
+        //佣金是增加还是减少
+        bountyChange:0,
+        //佣金是否是个人还是团队
+        personalOrTeams:0,
+        orders: [],
+    };
+};
+//订单详情模型
+var Model_OrderDetail = function () {
+    return {
+        //订单的时间
+        orderTime:"",
+        //奖励金改变的数量
+        bounty:"",
+        //奖励金改变后的数量
+        balance:"",
+        //订单的来源
+        orderOrigin:"",
+        //单号
+        oddNum:"",
+        //购买商品图片
+        orderImg:"",
+        //用户向卖家付款金额
+        PaymentAmount:"",
+        //我的佣金
+        myCommission:"",
+        //下属佣金
+        branchCommission:""
 
+    }
+}
 //商品列表模型
 var Model_ItemsList = function () {
     return {
@@ -842,11 +877,12 @@ var Model_ItemsList = function () {
         pageNum: 0,
         pageNumH: 0,
         pageCount: 0,
-        items: [],
+        //评论的总条数
         commmentCount:0,
+        items: [],
+
     };
 };
-
 //商品详情模型
 var Model_ItemDetail = function () {
     return {

@@ -51,7 +51,7 @@ var FriendPage_GetItemsList = function () {
                 $.each(result.Items, function (i, data) {
                     var itemFriend = new Model_Item();
                     if (data.goods_info != undefined && data.goods_info != null) {
-                        //商品idi
+                        //商品id
                         itemFriend.goodId = data.goods_info.id;
                         //商品名称
                         itemFriend.itemTitle = data.goods_info.name;
