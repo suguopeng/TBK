@@ -4,14 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/group.html" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12da2336-c0fd-4bd5-bf67-599cc2640416" name="Default Changelist" comment="提交订单页面 order.css">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/default.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/default.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/order.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/order.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order.html" beforeDir="false" afterPath="$PROJECT_DIR$/order.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style/order.css" beforeDir="false" afterPath="$PROJECT_DIR$/style/order.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/tsconfig.json" afterDir="false" />
-    </list>
+    <list default="true" id="12da2336-c0fd-4bd5-bf67-599cc2640416" name="Default Changelist" comment="提交订单页面 order.css" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -101,8 +94,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/order.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="25" column="14" lean-forward="true" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
+            <state relative-caret-position="108">
+              <caret line="43" column="61" lean-forward="true" selection-start-line="43" selection-start-column="61" selection-end-line="43" selection-end-column="61" />
             </state>
           </provider>
         </entry>
@@ -386,7 +379,7 @@
       <workItem from="1561854427383" duration="616000" />
       <workItem from="1561855209661" duration="1459000" />
       <workItem from="1561861581074" duration="1511000" />
-      <workItem from="1561863506457" duration="652000" />
+      <workItem from="1561863506457" duration="1418000" />
     </task>
     <task id="LOCAL-00001" summary="首次提交">
       <created>1561689850656</created>
@@ -413,16 +406,15 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1139180000" />
+    <option name="totallyTimeSpent" value="1139946000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.10432034" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.10432034" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="0" weight="0.032502707" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="0" visible="true" weight="0.67483294" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" weight="0.32900432" />
       <window_info anchor="bottom" id="Version Control" order="2" />
       <window_info anchor="bottom" id="Docker" order="3" show_stripe_button="false" />
@@ -664,8 +656,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/order.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="25" column="14" lean-forward="true" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
+        <state relative-caret-position="108">
+          <caret line="43" column="61" lean-forward="true" selection-start-line="43" selection-start-column="61" selection-end-line="43" selection-end-column="61" />
         </state>
       </provider>
     </entry>
