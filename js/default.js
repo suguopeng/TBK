@@ -445,9 +445,13 @@ function timeago(dateTimeStamp){
     return result;
 }
 
-var formatDate=function (datetime)   {
+var formatDate=function (datetime){
+    var datetimeLength=String(datetime).length;
+    for(var i=0;i<13-datetimeLength;i++){
+        datetime=datetime*10;
+    }
     var datetime= new Date(datetime);
-    var   year=datetime.getYear();
+    var   year=datetime.getFullYear();
     var   month=datetime.getMonth()+1;
     var   date=datetime.getDate();
     var   hour=datetime.getHours();
@@ -850,7 +854,9 @@ var Model_OrdersList = function () {
 var Model_OrderDetail = function () {
     return {
         //订单的时间
-        orderTime:"",
+        orderTime:{},
+        //奖励金增加还是减少
+        bountyChange:0,
         //奖励金改变的数量
         bounty:"",
         //奖励金改变后的数量
