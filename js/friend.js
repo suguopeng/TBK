@@ -11,7 +11,7 @@ var FriendPage_AjaxConfig = {
         pageNum: 0,
         pageCount: 20,
         isFree: "",
-        keyWords: "",
+        keyWord: "",
         goodId:""
     },
     have: true,
@@ -20,8 +20,8 @@ var FriendPage_AjaxConfig = {
 var FriendPage_GetItemsList = function () {
     //设置keyWords
     var paramObj = Util_GetUrlParams();
-    if (paramObj != null && paramObj.keyWords != undefined && paramObj.keyWords != null) {
-        FriendPage_AjaxConfig.ajaxData.keyWords = paramObj.keyWords;
+    if (paramObj!=null && paramObj.keyWord != undefined && paramObj.keyWord != null){
+        FriendPage_AjaxConfig.ajaxData.keyWord = paramObj.keyWord;
     }
     if (!FriendPage_AjaxConfig.ajaxing && FriendPage_AjaxConfig.have) {
         $.ajax({
@@ -75,9 +75,17 @@ var FriendPage_GetItemsList = function () {
                         itemFriend.couponPrice = data.goods_info.coupon_price;
                         //商品发布时间
                         itemFriend.itemTime = data.goods_info.create_time;
-                        itemFriend.commentContent = data.goods_info.commentContent;
+                        if(data.Comment!=null && data.Comment!=undefined && data.Comment!={}){
+                            $.each(data.Comment.Data,function(i,com){
+                                itemFriend.commentContent.push(com.content);
+                            })
+                            // itemFriend.commentContent = data.Comment.Data.map(function (value) {
+                            //     return value.content;
+                            // });
+                        }
+
                         // itemFriend.commentNum = data.goods_info.commentNum;
-                        itemFriend.commentNum = 3;
+                        // itemFriend.commentNum = 3;
                         // itemFriend.itemTime = timeago(data.goods_info.update_time);
                     }
                     FriendPage.items.push(itemFriend);
@@ -106,7 +114,7 @@ var FriendPage_GetNickName= function () {
             url:" http://v.msno1.vip/goods_bbs_api/get_comment_users_by_random",
             dataType: "json",
             // data: "limit:  FriendPage.commmentCount ",//请求昵称的条数
-            data:"limit:40",
+            data:"limit:100",
             beforeSend: function () {},
             success: function (result) {
                 $.each(result.data, function (i, data) {
@@ -117,33 +125,6 @@ var FriendPage_GetNickName= function () {
             complete: function () {}
         })
 };
-//ajax 获取评论用户的评论内容
-// var FriendPage_GetComment= function () {
-//     $.ajax({
-//         async: false,
-//         type: "get",
-//         url:"http://v.msno1.vip/goods_bbs_api/get_comment_rows_by_random",
-//         dataType: "json",
-//         data: "limit:20",
-//         beforeSend: function () {},
-//         success: function (result) {
-//             var userCommentItem={
-//                 CommentId:"",
-//                 CommenContent:""
-//             };
-//             $.each(result.data, function (i, data) {
-//                 userComment.CommentId=data.ID;
-//                 userComment.CommentContent=data.JSON_Data.content;
-//                 if(data.JSON_Data.content!=""&&data.JSON_Data.content!=undefined){
-//                     userComment.push(userCommentItem);
-//                 }
-//             })
-//         },
-//         error: function () {},
-//         complete: function () {}
-//     })
-// };
-//绑定页面数据
 var FriendPage_BindItemsList = function () {
     var FShtml="";
     var Fhtml = "";
@@ -235,8 +216,10 @@ var FriendPage_BindItemsList = function () {
                 '                <p class="post-content">\n' +
                 '                ' + data.itemBody + '\n' +
                 '        </p>';
-            Phtml += '<p class="copyTaoCode" ><span style="color:red">复制这条信息，打开【手机淘宝】</span><span class="rushToBy" style="color:red">立即抢购</span></p>'
-            Phtml += '<a class="get_price"  href="item.html?id=data.itemId">分享我，约赚取' + (data.getPrice * user.getPoint / 100).toFixed(2) + '元</a>';
+            Phtml += '<p class="copyTaoCode" ><span style="color:red">复制这条信息，打开【手机淘宝】</span><span class="rushToBy" style="color:red">立即抢购</span></p>';
+            if (user.getPoint != 0 && user.authorize == true) {
+                Phtml += '<a class="get_price"  href="item.html?id=data.itemId">分享我，约赚取' + (data.getPrice * user.getPoint / 100).toFixed(2) + '元</a>';
+            }
             Phtml += '</div>\n';
             Phtml += '<div class="my-gallery"  itemscope="" itemtype="http://schema.org/ImageGallery">';
 
@@ -283,27 +266,20 @@ var FriendPage_BindItemsList = function () {
                 '</a>\n' +
                 '     </div>\n' +
                 '</div>\n';
-                   Phtml+= '<di class="discuss-wrap" style="display:none">\n' +
-                        '            <div class="discuss">\n';
-                   if(data.commentNum){
-                       for(var a=1;a<=data.commentNum;a++){
-                           Phtml+= '            <div>\n' +
-                               '      <span style="color:#0a2969;font-weight:bold " class="user-nickName">'+userNickName[i]+'</span><span class="comment-content">珍视明眼贴缓解眼疲劳护眼贴学生眼干保护视力淡化黑眼圈近视眼贴</span>\n' +
-                               '            </div>\n' ;
-                           i++;
-                       }
-                   }
-            // if(data.commentContent){
-            //     for(var a=1;a<=data.commentContent.length;a++){
-            //         Phtml+= '            <div>\n' +
-            //             '      <span style="color:#0a2969;font-weight:bold " class="user-nickName">'+userNickName[i]+'</span><span class="comment-content">'+data.commentContent[a]+'</span>\n' +
-            //             '            </div>\n' ;
-            //         i++;
-            //     }
-            // }
-
-                      Phtml+= '            </div>\n' +
-                        '        </div>\n';
+            if(data.commentContent.length) {
+                Phtml += '<di class="discuss-wrap" >\n' +
+                    '            <div class="discuss">\n';
+                for (var a = 0; a <data.commentContent.length; a++) {
+                    var thisComment=$('<div>'+ data.commentContent[a]+'</div>');
+                    Phtml += '            <div>\n' +
+                        '      <span style="color:#0a2969;font-weight:bold " class="user-nickName">' + userNickName[i] + '</span>\n' +
+                       ' '+ thisComment.text()+
+                        '            </div>\n';
+                    i++;
+                }
+                Phtml += '</div>\n' +
+                    '        </div>\n';
+            }
            Phtml+='</li>';
         }
     });
@@ -311,19 +287,10 @@ var FriendPage_BindItemsList = function () {
     // $("#div_each").append(Fhtml);
     $("#div_each").append(Phtml);
 
-    // var i=0;
-    // var j=0;
-    // $.each(JSON.parse($(".discuss-wrap").find(".comment-content").text()),function(i,content){
-    //     if(content!=""&&content!=undefined){
-    //         $(".discuss-wrap").find(".user-nickName")[j].html(userNickName[i]);
-    //         i++;
-    //         j++;
-    //     }
-    // });
 
-    if($(".discuss-wrap").find("p").html()!=""){
-        $(".discuss-wrap").css("display","block");
-    }
+    // if($(".discuss-content").html()){
+    //     $(".discuss-wrap").css("display","block");
+    // }
     $("span.time").each(function () {
         var timeStr = $(this).attr("time");
         // $(this).html(Util_GetDateDiff(timeStr));
@@ -336,16 +303,15 @@ var getGoodId=function(){
     var topHeight=0;
     var resultIndex;
     var scrollTop = $(document).scrollTop();
-
-    $('#list').children('.item').each(function (i, ele){
-        if (topHeight >= scrollTop + 200){
-            return;
-        } else {
-            topHeight += $(ele).height() + 25;
+    var list=$('#list').find('.item');
+    for(i=0;i<list.length;i++){
+        if (topHeight <scrollTop + 200){
+            topHeight +=$( list[i]).height() + 25;
             resultIndex = i;
         }
-    });
-    var itemValue = $('.wechat-group').children('.item').eq(resultIndex).attr('goodId');
+    }
+    var itemValue = list.eq(resultIndex).attr('goodId');
+
     return itemValue;
     // $.cookie('goodId', itemValue, {expires: 7});
 };
@@ -434,7 +400,8 @@ $(window).scroll(function () {
 })
 var FriendPage_GetPositionGoodId=function(goodId){
     var goodId=goodId;
-    Attribute.ShareLink=goodId;
+    // console.log(window.location.href+"goodId="+goodId);
+    Attribute.ShareLink=window.location.href+"?goodId="+goodId;
     WeixinJsSdk_SetEvent();
 }
 // $(window).scroll(function(event) {

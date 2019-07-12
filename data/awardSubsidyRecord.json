@@ -1,0 +1,18 @@
+{
+  "pageNum":1,
+  "pageCount":10,
+  "subsidyItems":[
+    {
+      "subsidyUsers":"且听风吟",
+      "subsidies":3.21,
+      "applyTime":1562902652,
+      "subsidyStatus":"审核状态"
+    },
+    {
+      "subsidyUsers":"且听风吟",
+      "subsidies":3.21,
+      "applyTime":1562902652,
+      "subsidyStatus":"发送成功"
+    }
+  ]
+}

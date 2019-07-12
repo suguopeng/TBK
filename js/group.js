@@ -40,7 +40,7 @@ var GroupPage_GetItemsList = function () {
                 GroupPage.items = [];
                 $.each(result.Items, function (i, data) {
                     var itemGroup = new Model_Item();
-                    if (data.goods_info != undefined && data.goods_info != null) {
+                    if (data.goods_info != undefined && data.goods_info != null && data.goods_info.is_free==0) {
                         //商品id
                         itemGroup.goodId = data.goods_info.id;
                         //商品名称
@@ -73,7 +73,7 @@ var GroupPage_GetItemsList = function () {
                         //商品发布时间
                         itemGroup.itemTime =  data.goods_info.create_time;
                     }
-                    if(itemGroup.isFree==0){
+                    if(itemGroup.goodId!=""&&itemGroup.goodId!=undefined){
                         GroupPage.items.unshift(itemGroup);
                     }
                 })
@@ -92,8 +92,10 @@ var GroupPage_GetItemsList = function () {
                 scrollBottom();
                 // imgLazyload();
                 GroupPage_AjaxConfig.ajaxing = false;
-                initPhotoSwipeFromDOM('.my-gallery');
-
+                console.log( $(".figure-image").length);
+                $.each($(".figure-image"),function(i,data){
+                    console.log("图片索引"+$(data).attr("alt"));
+                })
             }
         })
     }
@@ -132,10 +134,10 @@ var GroupPage_BindItemsList = function () {
     $.each(GroupPage.items, function (i, data) {
         // html+='<input  type="hidden" class="GroupCodeType" code="' + data.GroupCodeType + '">';
         var reg = new RegExp("/Public/static/kindeditor/plugins/", "g");
-        data.itemBody = data.itemBody.replace(reg, imgUrl + "/Public/static/kindeditor/plugins/");
-        data.itemBody = data.itemBody.replace(/券后[\s\S]{1,7}元/g, '券后' + data.sourcePrice + '元');//这个是替换原价
-        data.itemBody = data.itemBody.replace(/卷后[\s\S]{1,7}元/g, '券后' + data.sourcePrice + '元');//这个是替换原价
-        data.itemBody = data.itemBody.replace(/券后[\s\S]{1,7}元/g, '券后' + data.sourcePrice + '元');//这个是替换券后价
+        data.itemBody = data.itemBody.replace(/天猫[\s\S]{1,7}元/g, '天猫' + data.sourcePrice + '元');//这个是替换原价
+        data.itemBody = data.itemBody.replace(/聚划算[\s\S]{1,7}元/g, '聚划算' + data.sourcePrice + '元');//这个是替换原价
+        data.itemBody = data.itemBody.replace(/券后[\s\S]{1,7}元/g, '券后【' + data.salePrice + '元');//这个是替换券后价
+        data.itemBody = data.itemBody.replace(/卷后[\s\S]{1,7}元/g, '券后【' + data.salePrice + '元');//这个是替换券后价
         html += ' <li class="wechat-group item" goodId="' + data.goodId + '">\n' +
             '            <div class="wechat-group-content">\n' +
             '                <div class="po-avt-wrap">\n' +
@@ -153,8 +155,10 @@ var GroupPage_BindItemsList = function () {
             '                            ' + data.itemBody + '\n' +
             '                        </p>\n';
         if (data.isFree == 0) {
-            html += '<p class="copyTaoCode"><span style="color:red">复制这条信息，打开【手机淘宝】</span><span class="rushToBy" style="color:red">立即抢购</span></p>'
-            html += '<a class="get_price" href="item.html?id=data.itemId">分享我，约赚取' + (data.getPrice * user.getPoint / 100).toFixed(2) + '元</a>';
+            html += '<p class="copyTaoCode"><span style="color:red">复制这条信息，打开【手机淘宝】</span><span class="rushToBy" style="color:red">立即抢购</span></p>';
+            if (user.getPoint != 0 && user.authorize == true) {
+                html += '<a class="get_price" href="item.html?id=data.itemId">分享我，约赚取' + (data.getPrice * user.getPoint / 100).toFixed(2) + '元</a>';
+            }
         } else if (data.isFree == 1) {
             html += '<a class="get_price" href="free.html?id=data.itemId&gid=data.goodId">点击这里可以免单</a>';
         }
@@ -200,6 +204,7 @@ var GroupPage_BindItemsList = function () {
     });
     $("ul").prepend(FShtml);
     $("ul").prepend(html);
+    initPhotoSwipeFromDOM('.my-gallery');
     $("span.time").each(function () {
         var timeStr = $(this).attr("time");
         // $(this).html(Util_GetDateDiff(timeStr));
@@ -240,25 +245,22 @@ var GroupPage_GetTaoCode = function (taobao_id) {
     }
     // return taoCode;
 };
-// 获取宝贝的Id,存到cookie
-var getGoodId=(function(){
-    var topHeight = 0;
+var getGoodId=function(){
+    var topHeight=0;
     var resultIndex;
     var scrollTop = $(document).scrollTop();
-
-    $('#list').children('.item').each(function (i,ele){
-        if (topHeight >=scrollTop+200){
-            return;
-        } else{
-            topHeight += $(ele).height() + 30;
+    var list=$('#list').children('.item');
+    for(i=0;i<list.length;i++){
+        if (topHeight <scrollTop + 200){
+            topHeight +=$( list[i]).height() + 30;
             resultIndex = i;
         }
-    });
-    var itemValue = $('.wechat-group').children('.item').eq(resultIndex).attr('goodId');
-    return itemValue;
-    // $.cookie('goodId', itemValue,{expires: 7});//存入cookie
-})
+    }
+    var itemValue = list.eq(resultIndex).attr('goodId');
 
+    return itemValue;
+    // $.cookie('goodId', itemValue, {expires: 7});
+};
 var  getGoodsIdFromUrl=function(){
     var paramsObj = Util_GetUrlParams();
     if (paramsObj != undefined && paramsObj != null && paramsObj.goodsCookId != undefined && paramsObj.goodsCookId != null) {
@@ -317,7 +319,8 @@ var Group_copyTaocode = function () {
 
 var GroupPage_GetPositionGoodId=function(goodId){
     var goodId=goodId;
-    Attribute.ShareLink=goodId;
+    // console.log(window.location.href+"goodId="+goodId);
+    Attribute.ShareLink=window.location.href+"goodId="+goodId;
     WeixinJsSdk_SetEvent();
 }
 //鼠标上划事件

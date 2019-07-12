@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>提现</title>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <link rel="stylesheet" type="text/css" href="style/default.css"/>
+    <link rel="stylesheet" type="text/css" href="style/cashOut.css"/>
+    <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="js/default.js"></script>
+    <script type="text/javascript" src="js/cashOut.js"></script>
+    <script type="text/javascript" src="http://layui.hcwl520.com.cn/layer-v3.1.1/layer.js"></script>
+</head>
+<body>
+<div id="user" class="clearfix">
+    <!--<div class="head">-->
+        <!--<img id="my-head" src="image/userImg.jpg">-->
+    <!--</div>-->
+    <!--<div class="info">-->
+        <!--<div class="name"><em id="my-nickname">游客</em><span class="level"><i class="tbkfont"></i><em-->
+                <!--id="my-grade">普通用户</em></span>-->
+        <!--</div>-->
+        <!--<div class="text"><span>会员号:</span><em id="my-uid" onclick="">45789</em></div>-->
+    <!--</div>-->
+    <!--<div class="total-bounty"><img style="width:20px;height:20px;" src="image/money-bag.png"-->
+                                   <!--alt=""><span>&nbsp63.45元</span></div>-->
+</div>
+    <div class="cash-out-wrap">
+    <div class="cash-out-head"></div>
+    <div class="cash-out">
+        <div class="cash-quantity">
+            <div class="award-and-benefit">
+                <!--<div class="award"><span>￥36.22元</span><span>奖励金</span>-->
+                    <!--<button class="clickBtn awardBtn">奖励金提现</button>-->
+                <!--</div>-->
+                <!--<div class="delimiter"></div>-->
+                <!--<div class="benefit"><span>￥36.22元</span><span>福利金</span>-->
+                    <!--<button class="clickBtn benefitBtn">福利金提现</button>-->
+                <!--</div>-->
+            </div>
+        </div>
+    </div>
+</div>
+<div class="applyAward-wrap">
+    <div class="subsidy-content">
+        <div class="subsidy-info">
+            <div class="subsidy-detail award-detail">
+                <div class="accumulated-subsidies">
+                    <span id="award-accumulated-subsidies">￥0.00元</span>
+                    <span>累计已补贴</span>
+                </div>
+                <div class="subsidible">
+                    <span id="award-subsidible">￥0.00元</span>
+                    <span>可补贴</span>
+                </div>
+                <div class="to-confirmed">
+                    <span id="award-to-confirmed">￥0.00元</span>
+                    <span>待确认</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="apply-subsidy">
+        <div class="subsidy-count">
+            <span>补贴金额</span>
+            <input class="search-inp" type="text" placeholder="请输入补贴金额">
+        </div>
+        <div class="friendship-tips">
+            <span>友情提示</span>
+            <span style="color:orangered">系统采用微信红包发放</span>
+        </div>
+        <div class="focus-public-number">
+            <a href="https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzUxNzMwMTIzOA==&scene=126&bizpsid=0#wechat_redirect">
+                <span>点击这里授权关注</span>
+                <span style="color:darkcyan">请长按二维码关注公众号</span>
+            </a>
+        </div>
+        <div class="apply-btn">
+            <span>我要申请补贴奖励金</span>
+        </div>
+    </div>
+    <div class="subsidy-record">
+        <div class="subsidy-introduce">
+            <span>补贴记录</span>
+            <div><img class="question" src="image/question.png" alt=""><span class="introduce">补贴说明</span></div>
+        </div>
+            <div class="award-subsidy-items">
+            <!--<div class="user-number">-->
+                <!--<span>MSNo1_user</span>-->
+                <!--<span>￥4.12</span>-->
+            <!--</div>-->
+            <!--<div class="time">-->
+                <!--<span>20.19-07-09 15:30:47</span>-->
+                <!--<span>等待审核</span>-->
+            <!--</div>-->
+        </div>
+
+    </div>
+</div>
+<div class="applyBenefit-wrap" >
+    <div class="subsidy-content">
+        <div class="subsidy-info">
+            <div class="subsidy-detail benefit-detail">
+                <div class="accumulated-subsidies">
+                    <span id="benefit-accumulated-subsidies">￥0.00元</span>
+                    <span>累计已补贴</span>
+                </div>
+                <div class="subsidible">
+                    <span id="benefit-subsidible">￥0.00元</span>
+                    <span>可补贴</span>
+                </div>
+                <div class="to-confirmed">
+                    <span id="benefit-to-confirmed">￥0.00元</span>
+                    <span>待确认</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="apply-subsidy">
+        <div class="subsidy-count">
+            <span>补贴金额</span>
+            <input class="search-inp" type="text" placeholder="请输入补贴金额">
+        </div>
+        <div class="friendship-tips">
+            <span>友情提示</span>
+            <span style="color:orangered">系统采用微信红包发放</span>
+        </div>
+        <div class="focus-public-number">
+            <a href="https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzUxNzMwMTIzOA==&scene=126&bizpsid=0#wechat_redirect">
+                <span>点击这里授权关注</span>
+                <span style="color:darkcyan">请长按二维码关注公众号</span>
+            </a>
+
+        </div>
+        <div class="apply-btn">
+            <span>我要申请补贴福利金</span>
+        </div>
+    </div>
+    <div class="subsidy-record">
+        <div class="subsidy-introduce">
+            <span>补贴记录</span>
+            <div><img class="question" src="image/question.png" alt=""><span class="introduce">补贴说明</span></div>
+        </div>
+        <div class="benefit-subsidy-items">
+            <!--<div class="user-number">-->
+                <!--<span>MSNo1_user</span>-->
+                <!--<span>￥4.12</span>-->
+            <!--</div>-->
+            <!--<div class="time" >-->
+                <!--<span>20.19-07-09 15:30:47</span>-->
+                <!--<span>等待审核</span>-->
+            <!--</div>-->
+        </div>
+    </div>
+</div>
+
+<div style="width:100%;height:70px"></div>
+</body>
+</html>

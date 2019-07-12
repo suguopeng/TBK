@@ -1,0 +1,298 @@
+/*.cash-out-head{*/
+    /*width:100%;*/
+    /*height:50px;*/
+    /*background:#ed9e39;*/
+/*}*/
+#user{
+    padding: 10px 15px ;
+    position: relative;
+    background:#fff;
+}
+#user .head {
+    width: 80px;
+    height: 80px;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
+}
+#user .head img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+#user .info {
+    position: absolute;
+    left: 110px;
+    bottom: 30px;
+}
+#user .info .name {
+    color: #000000;
+}
+#user .info div {
+    font-size: 14px;
+    height: 26px;
+    line-height: 26px;
+}
+#user .info .name .level {
+    display: inline-block;
+    margin-left: 5px;
+    background-color: #e72434;
+    color: #ffffff;
+    border-radius: 3px;
+    height: 14px;
+    line-height: 14px;
+    font-size: 10px;
+    padding: 0px 3px;
+    vertical-align: 1px;
+}
+#user .info .name .level i {
+    font-size: 7px;
+    line-height: 7px;
+    margin-right: 2px;
+    vertical-align: 1px;
+}
+.tbkfont {
+    font-family: "tbkfont" !important;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+#user .info .name .level {
+    display: inline-block;
+    margin-left: 5px;
+    background-color: #e72434;
+    color: #ffffff;
+    border-radius: 3px;
+    height: 14px;
+    line-height: 14px;
+    font-size: 10px;
+    padding: 0px 3px;
+    vertical-align: 1px;
+}
+#user .info .text {
+    color: #333333;
+}
+#user .info .text em {
+    font-size: 13px;
+}
+#user .info div {
+    font-size: 12px;
+    height: 26px;
+    line-height: 26px;
+}
+#user .info .text span {
+    margin-right: 3px;
+}
+.cash-out-wrap{
+    font-family:_GB2312 KaiTi_GB2312;
+}
+.Member-id{
+    padding-left: 10px;
+    padding-top: 5px;
+}
+.cash-out{
+    width:100%;
+    background:#fff;
+}
+.cash-quantity{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+    border-top:1px dotted #eeeeee;
+}
+.total-bounty{
+    font-size:15px;
+    padding:6px;
+    position: absolute;
+    top: 34px;
+    right: 30px;
+}
+.award-and-benefit{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:10px 0px 5px;
+}
+.award-and-benefit {
+    font-size:13px;
+}
+.award,.benefit{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+.award,.benefit{
+    padding:0 30px 10px;
+}
+.delimiter{
+    width: 1px;
+    height: 28px;
+    background: #fff;
+    margin-bottom:47px;
+}
+.award-btn,.benefit-btn{
+    width:90%;
+    height:30px;
+    background:red;
+    margin:auto;
+    font-size:15px;
+    color:#fff;
+    margin-top:20px;
+    border-radius:10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.clickBtn{
+    /*background:#f0c514;*/
+    margin-top:10px;
+    box-shadow:2px 4px 2px #B00000;
+    border:0;
+    background:red;
+    color: #fff;
+    width: 100px;
+    height: 25px;
+    border-radius:4px;
+}
+body{
+    background:#eeeeee;
+}
+.subsidy-content{
+    width:100%;
+    background:#fff;
+}
+.subsidy-info{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items:center;
+    margin-top:5px;
+}
+.Subsidible{
+    font-size:20px;
+}
+.subsidy-detail{
+    display:flex;
+    justify-content:space-between;
+    width:100%;
+    font-size:13px;
+    margin:10px 0px;
+}
+.search-inp{
+    border:none;
+    outline:none;
+}
+.accumulated-subsidies,.subsidible ,.to-confirmed{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+.accumulated-subsidies{
+    margin-left:20px;
+    color:red;
+}
+.subsidible{
+    color:darkcyan;
+}
+.to-confirmed{
+    color:#ccc029;
+}
+.to-confirmed{
+    margin-right:20px;
+}
+.apply-subsidy{
+    padding-bottom:10px;
+    background:#fff;
+    border-top:1px solid #eeeeee;
+}
+.subsidy-count,.friendship-tips,.focus-public-number{
+    border-bottom:1px solid #eeeeee;
+    padding:10px 20px;
+}
+.search-inp,.friendship-tips>span:nth-child(2){
+    margin-left:40px;
+}
+.focus-public-number{
+    padding-left:100px;
+}
+.focus-public-number span:nth-child(1){
+    color:#0909a2;
+}
+.apply-btn{
+    box-sizing:border-box;
+    box-shadow:1px 2px 1px #B00000;
+    padding:5px;
+    width: 90%;
+    height: 25px;
+    background: red;
+    border-radius: 4px;
+    color: #fff;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:10px;
+}
+.subsidy-record{
+    background:#fff;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    padding:10px 20px;
+    border-top:1px dashed #999999;
+}
+.subsidy-introduce,.user-number,.time{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items:center;
+    padding:1px;
+}
+.subsidy-introduce{
+    padding-bottom:10px;
+}
+.user-number{
+    margin-top:5px;
+}
+.subsidy-record .question{
+    width:15px;
+    height:15px;
+}
+.subsidy-introduce>div{
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+    color:darkcyan;
+}
+.subsidy-item{
+    border-bottom:1px dotted #f2f2f2;
+    padding-bottom:5px;
+}
+.introduce{
+    margin-left:5px;
+}
+.time{
+    color:#535353;
+}
+.user-number>span:nth-child(2){
+    color:red;
+}
+.applyBenefit-wrap{
+    /*position: relative;*/
+    /*top: -295px;*/
+    /*right: 100%;*/
+    display:none;
+}
+.award-subsidy-item,.benefit-subsidy-item{
+    border-bottom:1px solid #eeeeee;
+}
+/*input::-webkit-input-placeholder{*/
+/*　color:red;*/
+/*}　*/

@@ -1,8 +1,97 @@
+#user{
+    padding: 10px 15px ;
+    position: relative;
+    background:#fff;
+}
+#user .head {
+    width: 80px;
+    height: 80px;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.1);
+}
+#user .head img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+#user .info {
+    position: absolute;
+    left: 110px;
+    bottom: 30px;
+}
+#user .info .name {
+    color: #000000;
+}
+#user .info div {
+    font-size: 14px;
+    height: 26px;
+    line-height: 26px;
+}
+#user .info .name .level {
+    display: inline-block;
+    margin-left: 5px;
+    background-color: #e72434;
+    color: #ffffff;
+    border-radius: 3px;
+    height: 14px;
+    line-height: 14px;
+    font-size: 10px;
+    padding: 0px 3px;
+    vertical-align: 1px;
+}
+#user .info .name .level i {
+    font-size: 7px;
+    line-height: 7px;
+    margin-right: 2px;
+    vertical-align: 1px;
+}
+.tbkfont {
+    font-family: "tbkfont" !important;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+#user .info .name .level {
+    display: inline-block;
+    margin-left: 5px;
+    background-color: #e72434;
+    color: #ffffff;
+    border-radius: 3px;
+    height: 14px;
+    line-height: 14px;
+    font-size: 10px;
+    padding: 0px 3px;
+    vertical-align: 1px;
+}
+#user .info .text {
+    color: #333333;
+}
+#user .info .text em {
+    font-size: 13px;
+}
+#user .info div {
+    font-size: 12px;
+    height: 26px;
+    line-height: 26px;
+}
+#user .info .text span {
+    margin-right: 3px;
+}
 #main {
     background: rgba(255, 255, 255, 0.5);
 }
 .myprice-title {
+    position:fixed;
+    width:100%;
+    top:0;
     height: 50px;
+    border-bottom:1px dotted #eeeeee;
+    z-index:2;
+    background:rgba(255, 255, 255, 0.9);
+    /*background-color:#fff;*/
 }
 .myprice-timeline {
     position: relative;
@@ -11,21 +100,68 @@
 }
 .myprice-timeline-wrap{
     position: relative;
+    top:50px;
 }
 .myprice-timeline-wrap>.time-axis{
-    position: absolute;
-    top: 0;
+    position: fixed;
     right: 0;
-    height: 100%;
+    height: auto;
     padding-right: 9px;
     display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-content:end;
-    background:#eee;
+    overflow-y:scroll;
+    box-sizing:border-box;
 }
-.time-axis>span{
+.myprice-title>ul{
+    padding-top:20px;
+    height:15px;
+    display: flex;justify-content:space-around;align-items:center;font-size:12px;font-weight:bold;
+}
+.myprice-title .title-item{
+    color:#826060;
+    text-shadow:1px 1px 1px #f5c3c3;
+}
+.myprice-title .break{
+    color:#f7a7bd;
+}
+.axis-line{
+    position:absolute;
+    right:7px;
+    width:0px;
+    height:auto;
+    border:1px dotted red;
+}
+.axis-time{
+    padding-right:12px;
+    /*display:flex;*/
+    /*flex-direction:column;*/
+    /*justify-content:flex-start;*/
+    /*align-content:end;*/
+}
+.axis-time .time-year-month{
+    color:#e72434;line-height:24px;
+}
+.time-day-wrap{
+    position: relative;
+    width: 20px;
+    height: 20px;
+    right: -17px;
+    background: #f5e4e7;
+    border-radius: 50%;
+}
+.axis-time .time-day{
+    line-height:24px;
+    position:relative;
+    right: -4px;
+    top: -2px;
+}
+.axis-time span {
     text-align:end;
+}
+.axis-time .round{
+    width:5px;height:5px;border-radius:50%;border:1px dotted red;position:absolute;top:7px; right: -17px;
+}
+.day-round{
+   border:1px dotted red;
 }
 .timeline-line {
     position: absolute;
@@ -182,7 +318,7 @@
     color: #79010b;
 }
 
-.timeline-info .item .info .get-price i {
+.timeline-info .item .info .branch-price i {
     color: #ff692f;
 }
 
