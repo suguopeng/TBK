@@ -2,27 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="12da2336-c0fd-4bd5-bf67-599cc2640416" name="Default Changelist" comment="提交订单页面 order.css">
-      <change afterPath="$PROJECT_DIR$/cashOut.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/award.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/awardBenefit.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/awardSubsidyRecord.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/benefit.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/benefitSubsidyRecord.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/freeOrder.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/image/fork-number.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/cashOut.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/freeOrder.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/style/cashOut.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/style/freeOrder.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/default.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/default.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/friend.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/friend.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/group.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/group.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/order.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/order.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order.html" beforeDir="false" afterPath="$PROJECT_DIR$/order.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style/order.css" beforeDir="false" afterPath="$PROJECT_DIR$/style/order.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -32,6 +12,9 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="TBK" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -47,8 +30,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cashOut.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="54" column="36" lean-forward="true" selection-start-line="54" selection-start-column="36" selection-end-line="54" selection-end-column="36" />
+            <state relative-caret-position="1566">
+              <caret line="54" column="36" selection-start-line="54" selection-start-column="36" selection-end-line="54" selection-end-column="36" />
               <folding>
                 <element signature="n#style#0;n#span#1;n#div#1;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#1;n#a#0;n#div#2;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -111,10 +94,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/cashOut.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-181">
-              <caret line="308" column="2" lean-forward="true" selection-start-line="308" selection-start-column="2" selection-end-line="308" selection-end-column="2" />
+            <state relative-caret-position="29">
+              <caret line="308" column="2" selection-start-line="308" selection-start-column="2" selection-end-line="308" selection-end-column="2" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#div#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#div#0;n#!!top" expanded="true" />
@@ -267,7 +253,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="width" value="1400" />
     <option name="height" value="1000" />
@@ -471,6 +457,7 @@
       <workItem from="1562767303532" duration="1333000" />
       <workItem from="1562893362950" duration="25052000" />
       <workItem from="1562937214361" duration="1728000" />
+      <workItem from="1562939039019" duration="530000" />
     </task>
     <task id="LOCAL-00001" summary="首次提交">
       <created>1561689850656</created>
@@ -497,16 +484,15 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1398673000" />
+    <option name="totallyTimeSpent" value="1399203000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.15542677" />
-      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="0" weight="0.6737194" />
+      <window_info id="Favorites" order="0" sideWeight="0.5011136" side_tool="true" weight="0.15542677" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.4988864" visible="true" weight="0.15542677" />
+      <window_info id="Structure" order="2" sideWeight="0.5011136" side_tool="true" weight="0.15542677" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="0" visible="true" weight="0.87193763" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" weight="0.32900432" />
       <window_info anchor="bottom" id="Version Control" order="2" />
       <window_info anchor="bottom" id="Docker" order="3" show_stripe_button="false" />
@@ -702,6 +688,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/cashOut.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1566">
+          <caret line="54" column="36" selection-start-line="54" selection-start-column="36" selection-end-line="54" selection-end-column="36" />
+          <folding>
+            <element signature="n#style#0;n#span#1;n#div#1;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#a#0;n#div#2;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#div#1;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#a#0;n#div#2;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/default.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="14094">
@@ -754,26 +754,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cashOut.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="54" column="36" lean-forward="true" selection-start-line="54" selection-start-column="36" selection-end-line="54" selection-end-column="36" />
-          <folding>
-            <element signature="n#style#0;n#span#1;n#div#1;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#a#0;n#div#2;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#div#1;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#1;n#a#0;n#div#2;n#div#1;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/cashOut.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-181">
-          <caret line="308" column="2" lean-forward="true" selection-start-line="308" selection-start-column="2" selection-end-line="308" selection-end-column="2" />
+        <state relative-caret-position="29">
+          <caret line="308" column="2" selection-start-line="308" selection-start-column="2" selection-end-line="308" selection-end-column="2" />
           <folding>
             <element signature="n#style#0;n#img#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#0;n#!!top" expanded="true" />
